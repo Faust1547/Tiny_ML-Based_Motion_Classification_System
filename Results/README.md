@@ -13,3 +13,9 @@
 | SRAM reduction | SRAM 用量減少 34.28 % | — |
 | Inference latency reduction | 推論延遲降低 27.09 % | — |
 | Decision logic enhancement | 新增靜止偵測與低信心分類機制；偵測到靜止狀態時跳過 NN 推論，降低不必要運算，並利用 Prediction Margin 判斷是否輸出 Uncertain| 額外的 log 可能會增加串列輸出的延遲時間 |
+
+| Optimization Item | Before | After | Percentage |
+|---|---|---|---|
+| SRAM Usage | 8,751 Bytes | 5,751 Bytes | - 34.28 % |
+| Inference Latency | 55.4 ms | 40.4ms | - 27.09 % |
+| Sampling Jitter |0.6 ~ 0.72 µs| 1.06 µs| + 76.67 ~ 47.22 %|
