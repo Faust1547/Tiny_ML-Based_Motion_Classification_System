@@ -1,16 +1,23 @@
-# Five-Stage Pipelined Processor
+# C & C++
 
 ## Overview
-本專案延伸課堂實作之五級 Pipeline CPU，將原先的 IM 與 DM 暫存器替換為實際 256 × 32 SRAM，並於後續合成進一步導入 Design for Testability (DFT) 與 Scan Chain，使內部暫存器具備較佳的 Controllability 與 Observability，並透過 ATPG 進行 Stuck-at Fault 測試與 Fault Coverage 評估。
+本專案結合 Arduino 與 MPU 6050 設計動作辨識系統，透過神經網路學習前後、上下、旋轉動作的路徑變化從而進行辨識，並透過 GPIO 讓 Arduino 與 MPU 進行資料傳輸。
 
-## Architecture
-五階 Pipelined CPU 架構，整合 SRAM、Hazard Detection、Forwarding 與 Scan-based DFT。
- 
-<img width="4113" height="1188" alt="image" src="https://github.com/user-attachments/assets/ada8b590-36e3-47a3-8c45-23de0a7b966b" />
+ ## Execution
+將硬體如接線圖完成連接：
 
+<img width="350" height="400" alt="image" src="https://github.com/user-attachments/assets/0dfbfeaa-11c8-4a09-9aae-9a0fa7ce1c1c" />
 
+而後將所有程式放在同層資料夾中並啟動主程式 `ESD.ino`，而後連接 Arduino DUE 並燒入，之後按下按鈕後即開始錄製動作並進行判定。
 
-## Results
-1. Post-sim 執行結果。
-2. Automatic test pattern generation 執行結果。
-3. TSMC 90nm 1P9M 實體設計之時序、面積、功耗紀錄，以及晶片實現結果與 Partition 表示。
+ ## Process Flow
+<img width="2982" height="1539" alt="image" src="https://github.com/user-attachments/assets/73426f6e-2795-4885-b4b3-4266d694adb7" />
+
+ ## File Description
+|File|Description|
+|---|---|
+|ESD.ino|主程式，包含 GPIO 設定、MPU 6050 初始化、資料收集與處理|
+|I2C_GPIO.cpp|GPIO 函式庫設定檔案|
+|I2C_GPIO.h|GPIO 函式庫標頭檔案|
+|nn_ops.cpp|負責神經網路運算的標頭檔案|
+|nn_weights.cpp|神經網路權重的標頭檔案|
