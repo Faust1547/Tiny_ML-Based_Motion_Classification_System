@@ -6,7 +6,7 @@
 ## Hardware
 由 Arduino DUE、MPU 6050 與按鈕組成。
 
-<img width="350" height="400" alt="image" src="https://github.com/user-attachments/assets/345060f5-1458-406c-8062-722138691253" />
+<img width="471" height="491" alt="image" src="https://github.com/user-attachments/assets/4e58a50e-f12f-454f-b8cb-94071ed18935" />
 
 ## Results
 1. 辨識結果
