@@ -9,5 +9,5 @@
 <img width="471" height="491" alt="image" src="https://github.com/user-attachments/assets/4e58a50e-f12f-454f-b8cb-94071ed18935" />
 
 ## Results
-1. 辨識結果
+1. 推論結果
 2. 優化設計說明
