@@ -9,7 +9,7 @@
 
 | Optimization Item | Improvement | Trade-off / Overhead |
 |---|---|---|
-| RTOS-based task separation | 改善任務排程和系統的可擴展性。 | 與 Busy-wait 排程相比 Sampling jitter 會稍微變差。 |
-| SRAM reduction | SRAM 用量減少 34.28 % | 無 |
-| Inference latency reduction | 推論延遲降低 27.09 % | 無 |
-| Decision logic enhancement | 新增了 `Static` 與 `Uncertain` 的辨識結果，並且在 `Static` 時能夠跳過 NN 流程與系統待機| 額外的 log 可能會增加串列輸出的延遲時間 |
+| RTOS-based task separation | 改善任務排程和系統的可擴展性 | 與 Busy-wait 排程相比 Sampling jitter 會稍微變差 |
+| SRAM reduction | SRAM 用量減少 34.28 % | — |
+| Inference latency reduction | 推論延遲降低 27.09 % | — |
+| Decision logic enhancement | 新增靜止偵測與低信心分類機制；偵測到靜止狀態時跳過 NN 推論，降低不必要運算，並利用 Prediction Margin 判斷是否輸出 Uncertain| 額外的 log 可能會增加串列輸出的延遲時間 |
