@@ -16,6 +16,6 @@
 
 | Optimization Item | Before | After | Percentage |
 |---|---|---|---|
-| SRAM Usage | 8,751 Bytes | 5,751 Bytes | - 34.28 % |
-| Inference Latency | 55.4 ms | 40.4ms | - 27.09 % |
-| Sampling Jitter |0.6 ~ 0.72 µs| 1.06 µs| + 76.67 ~ 47.22 %|
+| SRAM Usage | 8,751 Bytes | 5,751 Bytes | Reduce 34.28 % |
+| Inference Latency | 55.4 ms | 40.4ms | Reduce 27.09 % |
+| Sampling Jitter |0.6 ~ 0.72 µs| 1.06 µs| Increase 76.67 ~ 47.22 %|
